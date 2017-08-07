@@ -4,10 +4,9 @@
 // @description  Seller Info
 // @author       Mikelarg
 // @match        *.1688.com/*
-// @resource sellerInfo_CSS  file:///Users/mikelarg/WebstormProjects/SellerInfo1688/seller_info.css
-// @resource sellerInfo_HTML file:////Users/mikelarg/WebstormProjects/SellerInfo1688/seller_info.html
+// @resource sellerInfo_CSS  https://raw.githubusercontent.com/Mikelarg/SellerInfo1688/master/seller_info.css
+// @resource sellerInfo_HTML https://raw.githubusercontent.com/Mikelarg/SellerInfo1688/master/seller_info.html
 // @require http://code.jquery.com/jquery-1.12.4.min.js
-// @require file:///Users/mikelarg/WebstormProjects/SellerInfo1688/seller_info.js
 // @grant    GM_addStyle
 // @grant    GM_getResourceText
 // @grant    GM_setValue
