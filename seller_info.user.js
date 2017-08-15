@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         1688 Seller Info
-// @version      0.1
+// @version      0.1.1
 // @description  Seller Info
 // @author       Mikelarg
 // @match        http://*.1688.com/*
