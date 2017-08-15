@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         1688 Seller Info
-// @version      0.1.1
+// @version      0.2
 // @description  Seller Info
 // @author       Mikelarg
 // @match        http://*.1688.com/*
@@ -16,34 +16,34 @@
 (function () {
     'use strict';
     const sellerURL = jQuery('.app-layer').data('view-config').currentDomainUrl;
-    
+
     let data;
     let sellerColorInput;
     let sellerMessageInput;
     let sellerMessageElement;
-    
+
     function saveData(data) {
         GM_setValue("seller_data", JSON.stringify(data));
     }
     function getData() {
         let data = JSON.parse(GM_getValue("seller_data", null));
         if (data === null) data = {};
-        return data
+        return data;
     }
-    
+
     function dataToInputs() {
         if (data.hasOwnProperty(sellerURL)) {
             let seller = data[sellerURL];
-            let sellerColor = seller['color'];
-            let sellerMessage = seller['message'];
+            let sellerColor = seller.color;
+            let sellerMessage = seller.message;
             sellerColorInput.val(sellerColor);
             sellerMessageInput.val(sellerMessage);
             sellerMessageElement.css("background", sellerColor);
             sellerMessageElement.find('.message-text').text(sellerMessage);
             sellerMessageElement.fadeIn(500).css("display", "table");
-       }   
+        }
     }
-    
+
     if (sellerURL) {
         const sellerInfo_CSS = GM_getResourceText("sellerInfo_CSS");
         const sellerInfo_HTML = GM_getResourceText("sellerInfo_HTML");
@@ -124,6 +124,6 @@
         sellerMessageElement.find(".message-hide-button").click(function (e) {
             e.preventDefault();
             sellerMessageElement.fadeOut(500);
-        })
+        });
     }
 })();
