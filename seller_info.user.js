@@ -56,11 +56,12 @@
         sellerColorInput = sellerInfo.find('.seller-color input');
         sellerMessageInput = sellerInfo.find('.seller-message textarea');
         sellerMessageElement = jQuery('.seller-message-element');
-        let hidden = false;
+        let hidden = true;
         const sellerInfoHeight = sellerInfo.height();
         const sellerInfoWidth = sellerInfo.width();
         sellerInfo.width(20);
         sellerInfo.height(20);
+        sellerInfo.addClass('hidden');
 
         dataToInputs();
 
