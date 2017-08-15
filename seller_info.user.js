@@ -59,6 +59,8 @@
         let hidden = false;
         const sellerInfoHeight = sellerInfo.height();
         const sellerInfoWidth = sellerInfo.width();
+        sellerInfo.width(20);
+        sellerInfo.height(20);
 
         dataToInputs();
 
